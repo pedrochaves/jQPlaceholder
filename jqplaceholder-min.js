@@ -1,0 +1,1 @@
+(function(d,c){var e=d.document;c.fn.jQPlaceholder=function(){return this.each(function(){if("placeholder"in e.createElement("input"))return false;var a=c(this),b=a.attr("placeholder");a.attr("value")||a.attr("value",b);a.bind({focus:function(){a.attr("value")===b&&a.attr("value","")},blur:function(){a.attr("value")||a.attr("value",b)}})})}})(window,jQuery);
