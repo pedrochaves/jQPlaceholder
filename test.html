@@ -5,13 +5,14 @@
 		<script type="text/javascript" src="jqplaceholder.js"></script>
 		<script type="text/javascript">
 			$(function(){
-				$('input[placeholder]').jQPlaceholder();
+				$.jQPlaceholder();
 			});
 		</script>
 	</head>
 	<body>
 		<label for="input-field">
-			<input type="text" value="" placeholder="Type your name" id="input-field" />
+			<input type="text" value="Type your name" id="input-field" />
 		</label>
+		<input type="password" placeholder="Password" id="passwd-field" />
 	</body>
 </html>
