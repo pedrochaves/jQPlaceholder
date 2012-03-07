@@ -1,1 +1,11 @@
-(function(d,c){var e=d.document;c.fn.jQPlaceholder=function(){return this.each(function(){if("placeholder"in e.createElement("input"))return false;var a=c(this),b=a.attr("placeholder");a.attr("value")||a.attr("value",b);a.bind({focus:function(){a.attr("value")===b&&a.attr("value","")},blur:function(){a.attr("value")||a.attr("value",b)}})})}})(window,jQuery);
+/**
+ * jQPlaceholder - https://github.com/pedrochaves/jQPlaceholder
+ * 
+ * A jQuery plugin to simulate the HTML5 placeholder in browsers
+ * that don't support it
+ * 
+ * @author Pedro Chaves (https://github.com/pedrochaves/)
+ */
+
+(function(d,b){var e=function(a){var b=a.attr("type"),c=a.attr("placeholder")||a.attr("value");if("password"===b||"placeholder"in d.document.createElement("input")&&a.attr("placeholder"))return!1;!a.attr("value")&&"text"===b&&a.attr("value",c);a.live({"focus.jqplaceholder":function(){a.attr("value")===c&&a.attr("value","")},"blur.jqplaceholder":function(){a.attr("value")||a.attr("value",c)}})};b.jQPlaceholder=function(){b("input[placeholder], input[value]").jQPlaceholder()};b.fn.jQPlaceholder=function(){return this.each(function(){e(b(this))})}})(window,
+jQuery);
