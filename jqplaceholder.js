@@ -15,7 +15,7 @@
         var type        = self.attr("type"),
             placeholder = self.attr("placeholder") || self.attr("value");
         
-        if (type === "password") {
+        if ($.inArray(type, ["password", "submit", "button"]) > -1) {
             return false;
         }
         
